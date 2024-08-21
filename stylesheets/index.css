@@ -1,0 +1,36 @@
+@import url(../fonts/fonts.css);
+@import url(../stylesheets/variables.css);
+
+body {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  color: var(--text);
+  font-family: "Pier Sans Regular";
+  background-color: var(--background);
+}
+.wrapper {
+  display: inline-flex;
+  margin: auto;
+  gap: 10px;
+}
+.wrapper .left,
+.wrapper .right {
+  width: 40em;
+  background-color: #00000000;
+}
+.wrapper .left {
+  position: relative;
+}
+.wrapper .left .container {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.wrapper .right {
+}
+
+
+.name{
+  font-family: 'Pier Sans Bold';
+}

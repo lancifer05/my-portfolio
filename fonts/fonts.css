@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Pier Sans Black";
+  src: url(./PierSans-Black.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Pier Sans Black Italic";
+  src: url(./PierSans-BlackItalic.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Pier Sans Bold";
+  src: url(./PierSans-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Pier Sans Bold Italic";
+  src: url(./PierSans-BoldItalic.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Pier Sans Italic";
+  src: url(./PierSans-Italic.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Pier Sans Light";
+  src: url(./PierSans-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Pier Sans Light Italic";
+  src: url(./PierSans-LightItalic.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Pier Sans Medium";
+  src: url(./PierSans-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Pier Sans Medium Italic";
+  src: url(./PierSans-MediumItalic.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Pier Sans Regular";
+  src: url(./PierSans-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Pier Sans Regular Copy";
+  src: url(./PierSans-Regular\ copy.otf) format("opentype");
+}
