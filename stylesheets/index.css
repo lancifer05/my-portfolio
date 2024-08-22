@@ -10,13 +10,19 @@ body {
   background-color: var(--background);
 }
 .wrapper {
-  display: inline-flex;
   margin: auto;
-  gap: 10px;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 .wrapper .left,
 .wrapper .right {
-  width: 40em;
+  max-width: 40em;
+  width: 100%;
   background-color: #00000000;
 }
 .wrapper .left {
@@ -29,8 +35,16 @@ body {
 }
 .wrapper .right {
 }
+.name {
+  font-family: "Pier Sans Bold";
+}
+.unorderedlist{
+  list-style-type: none;
+}
+@media only screen and (min-width: 768px) {
 
+  .flex-container{
+    flex-direction: row;
+  }
 
-.name{
-  font-family: 'Pier Sans Bold';
 }
