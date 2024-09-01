@@ -23,7 +23,7 @@ body {
 .wrapper .right {
   max-width: 40em;
   width: 100%;
-  background-color: #00000000;
+  background-color:  var(--background);
 }
 .wrapper .left {
   position: relative;
@@ -41,6 +41,7 @@ body {
 .unorderedlist{
   list-style-type: none;
 }
+
 @media only screen and (min-width: 768px) {
 
   .flex-container{

@@ -1,4 +1,13 @@
 :root {
-  --background: #0d0d0d;
-  --text: #f3f3f3;
+  --background: #121212;
+  --text:   ;
   }
+  .rule{
+    font-size: 25px;
+    background: linear-gradient(to right,#F1F1F1, #ffdb70,#ffdb70);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+.name{
+  font-size: 60px;
+}
