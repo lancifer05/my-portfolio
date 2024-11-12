@@ -17,7 +17,7 @@ body {
 .flex-container {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+ gap: 10em;
 }
 .wrapper .left,
 .wrapper .right {
@@ -34,13 +34,173 @@ body {
   left: 0;
 }
 .wrapper .right {
+  width: 100%;
 }
 .name {
   font-family: "Pier Sans Bold";
 }
-.unorderedlist{
+.unorderedlist {
   list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px; /* Adjust space between icons */
 }
+
+.social-icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
+.social-icon svg {
+  transition: transform 0.3s, opacity 0.3s, fill 0.3s;
+  fill: #f7f7f79b; /* Default color */
+}
+
+.social-icon:hover svg {
+  fill: #F8DE22;  /* Color on hover */
+  transform: scale(1.1);  /* Scale effect */
+  opacity: 0.8;  /* Slight opacity change */
+}
+
+
+
+.job {
+  margin-bottom: 2rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #4d5bce;
+  animation: fade-left 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.jobs {
+  color: #F8DE22;
+  display: inline-block;
+  position: relative;
+}
+
+.jobs::before {
+  content: "";
+  animation: typing 13.5s linear infinite;
+}
+
+.jobs::after {
+  content: "";
+  border-right: 4px solid #f1f1f1;
+  animation: blink 0.5s linear infinite;
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translate(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  0%, 47.8593% {
+    content: "Mobile Developer";
+  }
+  1.1395%, 46.7198% {
+    content: "M";
+  }
+  2.2791%, 45.5803% {
+    content: "Mo";
+  }
+  3.4186%, 44.4408% {
+    content: "Mob";
+  }
+  4.5581%, 43.3013% {
+    content: "Mobi";
+  }
+  5.6977%, 42.1618% {
+    content: "Mobil";
+  }
+  6.8372%, 41.0223% {
+    content: "Mobile";
+  }
+  7.9767%, 39.8828% {
+    content: "Mobile ";
+  }
+  9.1163%, 38.7433% {
+    content: "Mobile D";
+  }
+  10.2558%, 37.6038% {
+    content: "Mobile De";
+  }
+  11.3953%, 36.4643% {
+    content: "Mobile Dev";
+  }
+  12.5348%, 35.3248% {
+    content: "Mobile Deve";
+  }
+  13.6743%, 34.1853% {
+    content: "Mobile Devel";
+  }
+  14.8138%, 33.0458% {
+    content: "Mobile Develop";
+  }
+  15.9533%, 31.9063% {
+    content: "Mobile Develop ";
+  }
+  17.0928%, 30.7668% {
+    content: "Mobile Developer";
+  }
+  48.9988%, 100% {
+    content: "";
+  }
+  50.1383%, 96.8578% {
+    content: "W";
+  }
+  51.2778%, 95.7183% {
+    content: "We";
+  }
+  52.4173%, 94.5788% {
+    content: "Web";
+  }
+  53.5568%, 93.4393% {
+    content: "Web ";
+  }
+  54.6963%, 92.2998% {
+    content: "Web D";
+  }
+  55.8358%, 91.1603% {
+    content: "Web De";
+  }
+  56.9754%, 90.0208% {
+    content: "Web Dev";
+  }
+  58.1148%, 88.8813% {
+    content: "Web Deve";
+  }
+  59.2543%, 87.7418% {
+    content: "Web Devel";
+  }
+  60.3938%, 86.6023% {
+    content: "Web Develop";
+  }
+  61.5333%, 85.4628% {
+    content: "Web Develop ";
+  }
+  62.6728%, 84.3233% {
+    content: "Web Developer";
+  }
+}
+
 
 @media only screen and (min-width: 768px) {
 

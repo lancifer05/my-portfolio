@@ -1,13 +1,28 @@
 :root {
-  --background: #121212;
-  --text:   ;
+  --background:#121212;;
+  --text:   #f7f7f7d0  ;
   }
   .rule{
     font-size: 25px;
-    background: linear-gradient(to right,#F1F1F1, #ffdb70,#ffdb70);
+    background: linear-gradient(to right,#F1F1F1, #ffdb70, #F8DE22);
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 .name{
-  font-size: 60px;
+  font-size: 80px;
 }
+
+.about {
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 5px; 
+  transition: all 0.3s ease;
+}
+
+/* .about:hover {
+  font-size: 25px; 
+  background-color:#3333332f; 
+  background: linear-gradient(to right,#3333332f, #ffdb7055, #f8df2291);
+  color: #fff; 
+  transform: scale(1.05); 
+} */
