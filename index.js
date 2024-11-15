@@ -1,19 +1,22 @@
-// const element = document.querySelector('.rule');
-// const texts = ['Mobile Developer', 'Web Developer'];
-// let currentIndex = 0;
-
-// function changeText() {
-//   currentIndex = (currentIndex + 1) % texts.length; // Toggle between 0 and 1
-//   element.textContent = texts[currentIndex];
-
-//   // Restart typing effect by removing and re-adding the class
-//   element.classList.remove('typing');
-//   void element.offsetWidth;  // Trigger reflow
-//   element.classList.add('typing');
-// }
-
-// // Start the text change every 4 seconds
-// setInterval(changeText, 1000);
-
-// // Initial typing effect
-// element.classList.add('typing');
+document.addEventListener('DOMContentLoaded', () => {
+    const switchButton = document.querySelector('.switch');
+    const body = document.body;
+  
+    // Check ng saved theme preference sa localStorage
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('lightmode');
+    }
+  
+    // Toggle theme and save preference
+    switchButton.addEventListener('click', () => {
+      body.classList.toggle('lightmode');
+  
+      // Save ng theme preference in localStorage
+      if (body.classList.contains('lightmode')) {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.removeItem('theme');
+      }
+    });
+  });
+  

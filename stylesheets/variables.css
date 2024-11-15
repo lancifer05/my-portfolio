@@ -1,22 +1,37 @@
 :root {
   --background:#121212;;
   --text:   #f7f7f7d0  ;
+}
+  .lightmode{
+    --background:#F5F7F8;
+    --text:   #121212;  ;
+   
+  }
+  .lightmode .rule{
+    font-size: 20px;
+    background: linear-gradient(to right,#000000, #ffdb70,#F4CE14);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .rule{
-    font-size: 25px;
-    background: linear-gradient(to right,#F1F1F1, #ffdb70, #F8DE22);
+    font-size: 20px;
+    background: linear-gradient(to right,#ffffff, #ffdb70,#F4CE14);
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 .name{
-  font-size: 80px;
+  font-size: 50px;
 }
 
 .about {
-  font-size: 25px;
-  padding: 10px 20px;
+  font-size: 18px;
   border-radius: 5px; 
   transition: all 0.3s ease;
+}
+.phinma{
+background-color: #f8df22be;
+background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 /* .about:hover {
