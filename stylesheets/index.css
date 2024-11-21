@@ -8,9 +8,13 @@ body {
   color: var(--text);
   font-family: "Pier Sans Regular";
   background-color: var(--background);
+  transition: background-color 0.3s ease, color 0.5s ease;
 }
 /* Button styles */
 .switch {
+  position: absolute; /* Make the button position absolute */
+  top: 20px; /* Distance from the top of the viewport */
+  right: 20px; /* Distance from the right of the viewport */
   background-color: transparent;
   height: 50px;
   width: 50px;
@@ -20,31 +24,38 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 100; /* Ensure the button is on top of other elements */
 }
 
-
+/* Default SVG color for dark mode */
 .switch svg {
-  fill:#F4CE14;
-  transition: fill 0.5s ease; 
+  fill:  #f7f7f7d0; /* Dark mode color (red-ish) */
+  transition: fill 0.3s ease; /* Smooth color transition */
 }
 
-
+/* Hide the second SVG icon by default (moon icon) */
 .switch svg:last-child {
   display: none;
+  opacity: 0; /* Fade effect */
+  transition: opacity 0.5s ease; /* Smooth opacity transition */
 }
 
-.lightmode .switch svg {
-  fill:  #121212; 
-}
-
+/* Show and hide icons with transitions in light mode */
 .lightmode .switch svg:first-child {
   display: none;
+  opacity: 0; /* Fade effect */
 }
 
 .lightmode .switch svg:last-child {
   display: block;
+  opacity: 1; /* Fade in effect */
+}
+
+/* When in light mode, change SVG color */
+.lightmode .switch svg {
+  fill: #F4CE14; /* Light mode color (yellow-ish) */
 }
 
 /* Button styles */
@@ -63,7 +74,6 @@ body {
 .wrapper .right {
   max-width: 40em;
   width: 100%;
-  background-color:  var(--background);
 }
 .wrapper .left {
   position: relative;
@@ -72,6 +82,12 @@ body {
   position: sticky;
   top: 0;
   left: 0;
+} 
+.container{
+ height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .wrapper .right {
@@ -105,14 +121,6 @@ body {
 }
 
 
-
-.job {
-  margin-bottom: 2rem;
-  font-size: 1.575rem;
-  font-weight: 700;
-  color: #4d5bce;
-  animation: fade-left 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
-}
 
 .jobs {
   color: #F4CE14;

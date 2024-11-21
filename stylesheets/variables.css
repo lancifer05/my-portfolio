@@ -20,7 +20,7 @@
     -webkit-text-fill-color: transparent;
   }
 .name{
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .about {
@@ -34,10 +34,17 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 
+
+.expertise{
+  font-size: 18px;
+  border-radius: 5px; 
+  transition: all 0.3s ease;
+}
+
 /* .about:hover {
   font-size: 25px; 
   background-color:#3333332f; 
   background: linear-gradient(to right,#3333332f, #ffdb7055, #f8df2291);
   color: #fff; 
-  transform: scale(1.05); 
+  transform: scale(0.5s); 
 } */
