@@ -1,67 +1,26 @@
 @import url(../fonts/fonts.css);
 @import url(../stylesheets/variables.css);
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 body {
   display: flex;
   margin: 0;
-  height: 100vh;
   color: var(--text);
   font-family: "Pier Sans Regular";
   background-color: var(--background);
-  transition: background-color 0.3s ease, color 0.5s ease;
+  transition: 0.4s ease;
 }
-/* Button styles */
-.switch {
-  position: absolute; /* Make the button position absolute */
-  top: 20px; /* Distance from the top of the viewport */
-  right: 20px; /* Distance from the right of the viewport */
-  background-color: transparent;
-  height: 50px;
-  width: 50px;
-  padding: 0;
-  border-radius: 50%;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 100; /* Ensure the button is on top of other elements */
-}
-
-/* Default SVG color for dark mode */
-.switch svg {
-  fill:  #f7f7f7d0; /* Dark mode color (red-ish) */
-  transition: fill 0.3s ease; /* Smooth color transition */
-}
-
-/* Hide the second SVG icon by default (moon icon) */
-.switch svg:last-child {
-  display: none;
-  opacity: 0; /* Fade effect */
-  transition: opacity 0.5s ease; /* Smooth opacity transition */
-}
-
-/* Show and hide icons with transitions in light mode */
-.lightmode .switch svg:first-child {
-  display: none;
-  opacity: 0; /* Fade effect */
-}
-
-.lightmode .switch svg:last-child {
-  display: block;
-  opacity: 1; /* Fade in effect */
-}
-
-/* When in light mode, change SVG color */
-.lightmode .switch svg {
-  fill: #F4CE14; /* Light mode color (yellow-ish) */
-}
-
-/* Button styles */
-
 .wrapper {
+  display: inline-flex;
   margin: auto;
+  height: 100dvh;
   padding: 1em;
   box-sizing: border-box;
 }
@@ -75,32 +34,45 @@ body {
   max-width: 40em;
   width: 100%;
 }
-.wrapper .left {
-  position: relative;
-}
-.wrapper .left .container {
-  position: sticky;
-  top: 0;
-  left: 0;
-} 
-.container{
- height: 100dvh;
+.left{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 20rem;
 }
 
+
+.right-content{
+  display: flex;
+  flex-direction: column;
+  padding-top: 92px;
+  justify-content: center;
+}
+.expertise h1{
+  color: #f4ce14;
+  margin-top: 5rem;
+  font-size: 22px;
+}
+.left-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
 .wrapper .right {
   width: 100%;
 }
+.right-container {
+  overflow-y: scroll;
+}
+
 .name {
   font-family: "Pier Sans Bold";
 }
+
 .unorderedlist {
   list-style-type: none;
   padding: 0;
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .social-icon {
@@ -113,17 +85,26 @@ body {
   transition: transform 0.3s, opacity 0.3s, fill 0.3s;
   fill: #f7f7f79b;
 }
-
+.lightmode .social-icon svg {
+  fill: #0b0a0a;
+}
 .social-icon:hover svg {
-  fill: #F4CE14;  
-  transform: scale(1.1);  
-  opacity: 0.8; 
+  fill: #f4ce14;
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 
-
+.job {
+  margin-bottom: 2rem;
+  font-size: 1.575rem;
+  font-weight: 700;
+  color: #4d5bce;
+  animation: fade-left 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
 
 .jobs {
-  color: #F4CE14;
+  font-size: 28px;
+  color: #f4ce14;
   display: inline-block;
   position: relative;
 }
@@ -151,7 +132,8 @@ body {
 }
 
 @keyframes blink {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
 
@@ -161,100 +143,205 @@ body {
 }
 
 @keyframes typing {
-  0%, 47.8593% {
+  0%,
+  47.8593% {
     content: "Mobile Developer";
   }
-  1.1395%, 46.7198% {
+  1.1395%,
+  46.7198% {
     content: "M";
   }
-  2.2791%, 45.5803% {
+  2.2791%,
+  45.5803% {
     content: "Mo";
   }
-  3.4186%, 44.4408% {
+  3.4186%,
+  44.4408% {
     content: "Mob";
   }
-  4.5581%, 43.3013% {
+  4.5581%,
+  43.3013% {
     content: "Mobi";
   }
-  5.6977%, 42.1618% {
+  5.6977%,
+  42.1618% {
     content: "Mobil";
   }
-  6.8372%, 41.0223% {
+  6.8372%,
+  41.0223% {
     content: "Mobile";
   }
-  7.9767%, 39.8828% {
+  7.9767%,
+  39.8828% {
     content: "Mobile ";
   }
-  9.1163%, 38.7433% {
+  9.1163%,
+  38.7433% {
     content: "Mobile D";
   }
-  10.2558%, 37.6038% {
+  10.2558%,
+  37.6038% {
     content: "Mobile De";
   }
-  11.3953%, 36.4643% {
+  11.3953%,
+  36.4643% {
     content: "Mobile Dev";
   }
-  12.5348%, 35.3248% {
+  12.5348%,
+  35.3248% {
     content: "Mobile Deve";
   }
-  13.6743%, 34.1853% {
+  13.6743%,
+  34.1853% {
     content: "Mobile Devel";
   }
-  14.8138%, 33.0458% {
+  14.8138%,
+  33.0458% {
     content: "Mobile Develop";
   }
-  15.9533%, 31.9063% {
+  15.9533%,
+  31.9063% {
     content: "Mobile Develop ";
   }
-  17.0928%, 30.7668% {
+  17.0928%,
+  30.7668% {
     content: "Mobile Developer";
   }
-  48.9988%, 100% {
+  48.9988%,
+  100% {
     content: "";
   }
-  50.1383%, 96.8578% {
+  50.1383%,
+  96.8578% {
     content: "W";
   }
-  51.2778%, 95.7183% {
+  51.2778%,
+  95.7183% {
     content: "We";
   }
-  52.4173%, 94.5788% {
+  52.4173%,
+  94.5788% {
     content: "Web";
   }
-  53.5568%, 93.4393% {
+  53.5568%,
+  93.4393% {
     content: "Web ";
   }
-  54.6963%, 92.2998% {
+  54.6963%,
+  92.2998% {
     content: "Web D";
   }
-  55.8358%, 91.1603% {
+  55.8358%,
+  91.1603% {
     content: "Web De";
   }
-  56.9754%, 90.0208% {
+  56.9754%,
+  90.0208% {
     content: "Web Dev";
   }
-  58.1148%, 88.8813% {
+  58.1148%,
+  88.8813% {
     content: "Web Deve";
   }
-  59.2543%, 87.7418% {
+  59.2543%,
+  87.7418% {
     content: "Web Devel";
   }
-  60.3938%, 86.6023% {
+  60.3938%,
+  86.6023% {
     content: "Web Develop";
   }
-  61.5333%, 85.4628% {
+  61.5333%,
+  85.4628% {
     content: "Web Develop ";
   }
-  62.6728%, 84.3233% {
+  62.6728%,
+  84.3233% {
     content: "Web Developer";
   }
 }
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #f2f2f2; /* Black text for contrast */
+  background-color:transparent; /* Yellow background */
+  border: #f4ce14 solid 2px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
 
+.download-button:hover {
+  background-color: #d4b210; /* Slightly darker yellow on hover */
+}
 
-@media only screen and (min-width: 768px) {
+.download-button:active {
+  background-color: #b3940c; /* Even darker yellow when clicked */
+}
 
-  .flex-container{
-    flex-direction: row;
+.download-button:focus {
+  outline: 3px solid #ffe36b; /* Focus outline for accessibility */
+  outline-offset: 2px;
+}
+
+/* expertise */
+.expertise {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.box {
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Text Styles */
+.box h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.box p {
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect with Background and Shadow */
+.box:hover {
+  background-color:#ffff5a0a; /* Darker background on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px); /* Add slight lift effect */
+}
+.box:hover h3 {
+  color: #f4ce14;
+}
+.box:hover p {
+  color: #f2f2f2;
+}
+
+@media only screen and (max-width: 768px) {
+  .switch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f1f1f146;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
+  .switch:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .flex-container {
+    flex-direction: row;
+  }
 }
