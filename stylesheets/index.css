@@ -323,6 +323,111 @@ body {
 .box:hover p {
   color: #f2f2f2;
 }
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Adds spacing between project items */
+}
+
+.projectsbox {
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+  align-items: flex-start; /* Aligns the date and content to the top */
+  border-radius: 8px; /* Rounded corners for hover effect */
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.projectdate {
+  display: flex;
+  width: 25%;
+  align-items: center; /* Aligns the text and divider vertically */
+  font-size: 18px;
+  font-weight: 600;
+  color: #919191;
+  white-space: nowrap; /* Prevents date text from wrapping */
+}
+
+.divider {
+  height: 2px; /* Divider thickness */
+  background-color: #919191; /* Divider color */
+  flex-grow: 1; /* Makes the divider fill the space */
+  margin: 0 10px; /* Adds spacing around the divider */
+}
+
+.projectdes {
+  flex: 1; /* Allows description to take up the remaining space */
+}
+
+.projectdes h2 {
+  margin: 0;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.projectdes h3 {
+  margin: 8px 0;
+  font-size: 18px;
+  color: #aaaaaa;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.projectdes p {
+  margin: 8px 0 0;
+  font-size: 16px;
+  color: #bbbbbb;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.skills {
+  display: flex;
+  gap: 8px; /* Spacing between skill tags */
+  margin-top: 10px;
+}
+
+.skill-tag {
+  background-color:  #f4cf1426; /* Default background */
+  color:  #f4ce14; /* Text color */
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer; /* Changes cursor to pointer for interactivity */
+}
+
+/* Hover Effect on projectsbox */
+.projectsbox:hover {
+  background-color: #ffff5a0a; /* Slight yellow tint on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px); /* Add slight lift effect */
+}
+
+.projectsbox:hover .projectdes h2 {
+  color: #f4ce14; /* Highlight title on hover */
+}
+
+.projectsbox:hover .projectdes h3 {
+  color: #f2f2f2; /* Lighten subtitle */
+}
+
+.projectsbox:hover .projectdes p {
+  color: #ffffff; /* Lighten description */
+}
+
+/* Hover Effect on skill tags */
+.skill-tag:hover {
+  background-color: #f4ce14; /* Highlight background on hover */
+  color: #000; /* Change text color to black */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
 
 @media only screen and (max-width: 768px) {
   .switch {
