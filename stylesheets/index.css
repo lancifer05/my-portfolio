@@ -55,7 +55,8 @@ body {
 .left-container{
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  padding-top: 92px;
+
 }
 .wrapper .right {
   width: 100%;
@@ -79,6 +80,27 @@ body {
   display: inline-block;
   width: 48px;
   height: 48px;
+}
+
+.redirect svg{
+ transition: transform 0.3s, opacity 0.3s, fill 0.3s;
+  fill: #f7f7f79b;
+}
+
+.redirect:hover svg {
+  fill: #f4ce14;
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+
+
+.redirect {
+  position: absolute;
+  top: 10px;      /* adjust as needed */
+  right: 10px;    /* adjust as needed */
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .social-icon svg {
@@ -143,123 +165,64 @@ body {
 }
 
 @keyframes typing {
-  0%,
-  47.8593% {
-    content: "Mobile Developer";
-  }
-  1.1395%,
-  46.7198% {
-    content: "M";
-  }
-  2.2791%,
-  45.5803% {
-    content: "Mo";
-  }
-  3.4186%,
-  44.4408% {
-    content: "Mob";
-  }
-  4.5581%,
-  43.3013% {
-    content: "Mobi";
-  }
-  5.6977%,
-  42.1618% {
-    content: "Mobil";
-  }
-  6.8372%,
-  41.0223% {
-    content: "Mobile";
-  }
-  7.9767%,
-  39.8828% {
-    content: "Mobile ";
-  }
-  9.1163%,
-  38.7433% {
-    content: "Mobile D";
-  }
-  10.2558%,
-  37.6038% {
-    content: "Mobile De";
-  }
-  11.3953%,
-  36.4643% {
-    content: "Mobile Dev";
-  }
-  12.5348%,
-  35.3248% {
-    content: "Mobile Deve";
-  }
-  13.6743%,
-  34.1853% {
-    content: "Mobile Devel";
-  }
-  14.8138%,
-  33.0458% {
-    content: "Mobile Develop";
-  }
-  15.9533%,
-  31.9063% {
-    content: "Mobile Develop ";
-  }
-  17.0928%,
-  30.7668% {
-    content: "Mobile Developer";
-  }
-  48.9988%,
-  100% {
-    content: "";
-  }
-  50.1383%,
-  96.8578% {
-    content: "W";
-  }
-  51.2778%,
-  95.7183% {
-    content: "We";
-  }
-  52.4173%,
-  94.5788% {
-    content: "Web";
-  }
-  53.5568%,
-  93.4393% {
-    content: "Web ";
-  }
-  54.6963%,
-  92.2998% {
-    content: "Web D";
-  }
-  55.8358%,
-  91.1603% {
-    content: "Web De";
-  }
-  56.9754%,
-  90.0208% {
-    content: "Web Dev";
-  }
-  58.1148%,
-  88.8813% {
-    content: "Web Deve";
-  }
-  59.2543%,
-  87.7418% {
-    content: "Web Devel";
-  }
-  60.3938%,
-  86.6023% {
-    content: "Web Develop";
-  }
-  61.5333%,
-  85.4628% {
-    content: "Web Develop ";
-  }
-  62.6728%,
-  84.3233% {
-    content: "Web Developer";
-  }
+  /* MOBILE DEVELOPER (0–33%) */
+  0%, 33% { content: "Mobile Developer"; }
+  1% { content: "M"; }
+  2% { content: "Mo"; }
+  3% { content: "Mob"; }
+  4% { content: "Mobi"; }
+  5% { content: "Mobil"; }
+  6% { content: "Mobile"; }
+  7% { content: "Mobile "; }
+  8% { content: "Mobile D"; }
+  9% { content: "Mobile De"; }
+  10% { content: "Mobile Dev"; }
+  11% { content: "Mobile Deve"; }
+  12% { content: "Mobile Devel"; }
+  13% { content: "Mobile Develop"; }
+  14% { content: "Mobile Develop "; }
+  15% { content: "Mobile Developer"; }
+
+  /* CLEAR */
+  34%, 35% { content: ""; }
+
+  /* WEB DEVELOPER (35–66%) */
+  36% { content: "W"; }
+  37% { content: "We"; }
+  38% { content: "Web"; }
+  39% { content: "Web "; }
+  40% { content: "Web D"; }
+  41% { content: "Web De"; }
+  42% { content: "Web Dev"; }
+  43% { content: "Web Deve"; }
+  44% { content: "Web Devel"; }
+  45% { content: "Web Develop"; }
+  46% { content: "Web Develop "; }
+  47%, 66% { content: "Web Developer"; }
+
+  /* CLEAR */
+  67%, 68% { content: ""; }
+
+  /* SOFTWARE ENGINEER (68–100%) */
+  69% { content: "S"; }
+  70% { content: "So"; }
+  71% { content: "Sof"; }
+  72% { content: "Soft"; }
+  73% { content: "Softw"; }
+  74% { content: "Softwa"; }
+  75% { content: "Softwar"; }
+  76% { content: "Software"; }
+  77% { content: "Software "; }
+  78% { content: "Software E"; }
+  79% { content: "Software En"; }
+  80% { content: "Software Eng"; }
+  81% { content: "Software Engi"; }
+  82% { content: "Software Engin"; }
+  83% { content: "Software Engine"; }
+  84% { content: "Software Enginee"; }
+  85%, 100% { content: "Software Engineer"; }
 }
+
 .download-button {
   display: inline-block;
   padding: 10px 20px;
@@ -326,7 +289,8 @@ body {
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Adds spacing between project items */
+  margin-top: 10px;
+  gap: 20px; /* Adds spacing between project items */
 }
 
 .projectsbox {
@@ -358,6 +322,7 @@ body {
 }
 
 .projectdes {
+  position: relative;
   flex: 1; /* Allows description to take up the remaining space */
 }
 
@@ -449,4 +414,18 @@ body {
   .flex-container {
     flex-direction: row;
   }
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #f4ce14;
+  border-top: 1px solid #333;
+  z-index: 1000;
 }
